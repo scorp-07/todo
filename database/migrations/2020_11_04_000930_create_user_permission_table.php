@@ -17,7 +17,6 @@ class CreateUserPermissionTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('permission_id');
-            $table->timestamps();
 
             $table->foreign('permission_id')
                 ->references('id')->on('permissions')
