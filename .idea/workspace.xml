@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="864298fd-6362-430d-99c2-8235acd6284f" name="Default Changelist" comment="" />
+    <list default="true" id="864298fd-6362-430d-99c2-8235acd6284f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +30,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -127,8 +150,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -137,6 +163,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -154,22 +181,43 @@
       <option name="presentableId" value="Default" />
       <updated>1604381108934</updated>
       <workItem from="1604381109959" duration="731000" />
-      <workItem from="1604381841705" duration="15526000" />
+      <workItem from="1604381841705" duration="16594000" />
+      <workItem from="1604460596362" duration="126000" />
+      <workItem from="1604460735061" duration="19899000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="484" y="276" width="444" height="249" key="#Composer" timestamp="1604381125475">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
     <state x="484" y="276" width="444" height="249" key="#Composer/56.27.1310.741@56.27.1310.741" timestamp="1604381125475" />
+    <state x="306" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604460400407">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="306" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/56.27.1310.741@56.27.1310.741" timestamp="1604460400407" />
     <state x="446" y="62" width="510" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604442710191">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
     <state x="446" y="62" width="510" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/56.27.1310.741@56.27.1310.741" timestamp="1604442710191" />
+    <state x="444" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604546006446">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="444" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/56.27.1310.741@56.27.1310.741" timestamp="1604546006446" />
     <state x="494" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604381839226">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
@@ -190,6 +238,18 @@
       <screen x="56" y="27" width="1310" height="741" />
     </state>
     <state width="1264" height="172" key="GridCell.Tab.0.right/56.27.1310.741@56.27.1310.741" timestamp="1604381840419" />
+    <state x="200" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1604460720978">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="200" y="31" width="1022" height="737" key="SettingsEditor/56.27.1310.741@56.27.1310.741" timestamp="1604460720978" />
+    <state x="440" y="128" width="540" height="524" key="StructurePopup" timestamp="1604460769083">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="440" y="128" width="540" height="524" key="StructurePopup/56.27.1310.741@56.27.1310.741" timestamp="1604460769083" />
+    <state x="375" y="174" key="run.anything.popup" timestamp="1604460780898">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="375" y="174" key="run.anything.popup/56.27.1310.741@56.27.1310.741" timestamp="1604460780898" />
     <state x="374" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604448423987">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
