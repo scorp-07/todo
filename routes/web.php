@@ -21,8 +21,8 @@ Route::namespace('Users')->group(function (){
     Route::get('/users', 'UserController@index');
     Route::get('/users/create', 'UserController@create');
     Route::get('/users/{id}/edit', 'UserController@edit');
-    Route::get('/users/{id}', 'UserController@show');
     Route::get('/users/{id}/delete', 'UserController@delete');
+    Route::get('/users/{id}', 'UserController@show');
     Route::put('/users/{id}', 'UserController@update');
     Route::post('/users/create', 'UserController@make');
 });

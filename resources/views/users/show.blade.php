@@ -26,6 +26,10 @@
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{ implode(',', $user->permissions->pluck('name')->toArray()) }}</td>
+                                    <td>
+                                        <a href="/users/{{$user->id}}/edit" class="btn btn-outline-primary">Edit</a>
+                                        <a href="/users/{{$user->id}}/delete" class="btn btn-outline-danger">Delete</a>
+                                    </td>
                                 </tr>
 
                             </tbody>
