@@ -20,23 +20,23 @@ class UserController extends Controller
         return view('users.users', ['users' => $users]);
     }
 
-    public function show($id)
+    public function show($user_id)
     {
-        $users = User::find($id);
+        $users = User::find($user_id);
 
         return view('users.show', ['user' => $users]);
     }
 
-    public function edit($id)
+    public function edit($user_id)
     {
-        $user = User::find($id);
+        $user = User::find($user_id);
 
         return view('users.edit', compact('user'));
     }
 
-    public function update(UserUpdate $request, $id)
+    public function update(UserUpdate $request, $user_id)
     {
-        $user = User::find($id);
+        $user = User::find($user_id);
         $user->update([
             'name' => $request["name"],
             'email' => $request["email"],
@@ -44,7 +44,7 @@ class UserController extends Controller
         ]);
         $user->permissions()->sync($request->permission);
 
-        return redirect('/users/'.$id);
+        return redirect('/users/'.$user_id);
     }
 
     protected function create()
@@ -65,9 +65,9 @@ class UserController extends Controller
         return redirect('/users');
     }
 
-    public function delete($id)
+    public function destroy($user_id)
     {
-        User::find($id)->delete();
+        User::find($user_id)->delete();
 
         return redirect('/users');
     }
