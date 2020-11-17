@@ -11,6 +11,6 @@ class Task extends Model
 
     public function goal()
     {
-        return $this->belongsTo(Goal::class, 'goal_id');
+        return $this->belongsTo(Goal::class);
     }
 }

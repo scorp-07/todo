@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +17,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::namespace('Users')->group(function (){
+    Route::get('/users', 'UserController@index');
+    Route::get('/users/create', 'UserController@create');
+    Route::get('/users/{user_id}/edit', 'UserController@edit');
+    Route::get('/users/{user_id}', 'UserController@show');
+    Route::put('/users/{user_id}', 'UserController@update');
+    Route::post('/users/create', 'UserController@make');
+    Route::delete('/users/{user_id}', 'UserController@destroy');
+});
+
+Route::namespace('Goals')->group(function () {
+    Route::get('/goals', 'GoalController@index');
+    Route::get('/goals/create', 'GoalController@create');
+});
