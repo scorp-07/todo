@@ -25,10 +25,18 @@
                                     <td>{{$user->id}}</td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>{{ implode(',', $user->permissions->pluck('name')->toArray()) }}</td>
                                     <td>
-                                        <a href="/users/{{$user->id}}/edit" class="btn btn-outline-primary">Edit</a>
-                                        <a href="/users/{{$user->id}}/delete" class="btn btn-outline-danger">Delete</a>
+                                        @foreach($user->permissions->pluck('name') as $permission)
+                                            <span class="text-primary border border-info rounded p-1">{{$permission}}</span>
+                                        @endforeach
+                                    </td>
+                                    <td class="d-flex">
+                                        <a href="/users/{{$user->id}}/edit" class="btn btn-outline-primary mr-1">Edit</a>
+                                        <form action="/users/{{$user->id}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-outline-danger">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
 

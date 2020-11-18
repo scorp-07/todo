@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'is_done',
+    ];
 
     public function goal()
     {
