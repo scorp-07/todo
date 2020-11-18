@@ -26,4 +26,5 @@ class GoalController extends Controller
         $users = User::all();
         return view('goals.create', ['users' => $users]);
     }
+
 }
