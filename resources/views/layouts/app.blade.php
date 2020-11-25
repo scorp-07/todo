@@ -48,6 +48,9 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="/goals/create">Add Goals <span class="sr-only">(current)</span></a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/tasks/create">Add Tasks <span class="sr-only">(current)</span></a>
+                            </li>
                         </ul>
                     @endauth
                     <!-- Right Side Of Navbar -->
@@ -66,7 +69,6 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
-                                    {{Auth::user()->id}}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

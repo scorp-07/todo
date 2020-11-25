@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Task;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,22 +18,26 @@ class TaskSeeder extends Seeder
         DB::table('tasks')->insert([
             'goal_id' => 1,
             'task' => 'Assign interview teams.',
-            'is_done' => 0
+            'status' => Task::STATUSES['new'],
+            'author_id' => 1
         ]);
         DB::table('tasks')->insert([
             'goal_id' => 1,
             'task' => 'Conduct the interviews.',
-            'is_done' => 0
+            'status' => Task::STATUSES['new'],
+            'author_id' => 1
         ]);
         DB::table('tasks')->insert([
             'goal_id' => 2,
             'task' => 'Evaluate the results.',
-            'is_done' => 0
+            'status' => Task::STATUSES['new'],
+            'author_id' => 2
         ]);
         DB::table('tasks')->insert([
             'goal_id' => 3,
             'task' => 'Create a cohesive “story” for our video.',
-            'is_done' => 0
+            'status' => Task::STATUSES['new'],
+            'author_id' => 1
         ]);
 
     }

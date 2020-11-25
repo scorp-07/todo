@@ -17,12 +17,18 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->unsignedBigInteger('goal_id');
             $table->text('task');
-            $table->boolean('is_done')->default(false);
+            $table->string('status');
+            $table->unsignedBigInteger('author_id');
             $table->timestamps();
 
             $table->foreign('goal_id')
                     ->references('id')
                     ->on('goals')
+                    ->onDelete('cascade');
+
+            $table->foreign('author_id')
+                    ->references('id')
+                    ->on('users')
                     ->onDelete('cascade');
         });
     }

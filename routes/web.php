@@ -30,8 +30,16 @@ Route::namespace('Users')->group(function (){
 Route::namespace('Goals')->group(function () {
     Route::get('/goals', 'GoalController@index');
     Route::get('/goals/create', 'GoalController@create');
+    Route::get('/goals/{goal_id}/edit', 'GoalController@edit');
+    Route::post('/goals/store', 'GoalController@store');
+    Route::put('/goals/{goal_id}', 'GoalController@update');
+    Route::delete('/goals/{goal_id}', 'GoalController@destroy');
 });
 
 Route::namespace('Tasks')->group(function () {
-    Route::post('/tasks/checked/{task_id}', 'TaskController@checked');
+    Route::get('/tasks/{task_id}/edit', 'TaskController@edit');
+    Route::get('/tasks/create', 'TaskController@create');
+    Route::post('/tasks', 'TaskController@store');
+    Route::put('/tasks/{task_id}', 'TaskController@update');
+    Route::delete('/tasks/{task_id}', 'TaskController@destroy');
 });
