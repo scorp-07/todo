@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserCreate;
 use App\Http\Requests\UserUpdate;
+use App\Models\Goal;
 use App\Models\User;
 
 class UserController extends Controller
@@ -22,29 +23,34 @@ class UserController extends Controller
 
     public function show($user_id)
     {
-        $users = User::find($user_id);
+        $user = User::findOrFail($user_id);
 
-        return view('users.show', ['user' => $users]);
+        $goal = Goal::ofUser($user)
+            ->with([
+                'tasks'
+            ])->get();
+
+        return view('users.show', ['user' => $user, 'goals' => $goal]);
     }
 
     public function edit($user_id)
     {
-        $user = User::find($user_id);
+        $user = User::findOrFail($user_id);
 
         return view('users.edit', compact('user'));
     }
 
     public function update(UserUpdate $request, $user_id)
     {
-        $user = User::find($user_id);
+        $user = User::findOrFail($user_id);
         $user->update([
-            'name' => $request["name"],
-            'email' => $request["email"],
-            'password' => bcrypt($request["password"])
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password'))
         ]);
         $user->permissions()->sync($request->permission);
 
-        return redirect('/users/'.$user_id);
+        return redirect('/users/' . $user_id);
     }
 
     protected function create()
@@ -54,12 +60,14 @@ class UserController extends Controller
 
     protected function make(UserCreate $request)
     {
-        $req = $request->validated();
 
+        /*
+         * refactor it
+         * */
         User::create([
-            'name' => $req["name"],
-            'email' => $req["email"],
-            'password' => bcrypt($req["password"])
+            'name' => $request["name"],
+            'email' => $request["email"],
+            'password' => bcrypt($request["password"])
         ])->permissions()->sync($request->permission);
 
         return redirect('/users');
@@ -67,7 +75,7 @@ class UserController extends Controller
 
     public function destroy($user_id)
     {
-        User::find($user_id)->delete();
+        User::findOrFail($user_id)->delete();
 
         return redirect('/users');
     }
